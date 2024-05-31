@@ -33,6 +33,11 @@ const Layout = async ({ children }: Props) => {
                     <h2 className="text-gravel md:text-4xl font-bold">
                         Hi, Im your AI powered sales assistant, Corinna!
                     </h2>
+                    <p className="text-iridium md:text-sm mb-10">
+                        Corinna is capable of capturing lead information without a form...{' '}
+                        <br />
+                        something never done before 😉
+                        </p>
                 </div>
             </div>
     )
