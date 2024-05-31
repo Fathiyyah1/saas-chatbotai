@@ -25,5 +25,10 @@ export const authContextProvider = ({
         currentStep, 
         setCurrentStep,
         }
-    return <Provider value={values}></Provider>
+    return <Provider value={values}>{children}</Provider>
+}
+
+export const useAuthContextHook = () => {
+    const state = React.useContext(authContext)
+    return state
 }
