@@ -4,7 +4,7 @@ type Props = {}
 
 const SignUp = (props: Props) => {
   return (
-    <div>SignUp</div>
+    <div className='flex-1 py-36 md:px-16 w-full'></div>
   )
 }
 export default SignUp
