@@ -1,10 +1,10 @@
 import React from 'react'
 
 type Props = {
-    children:
+    children: React.ReactNode
 }
 
-const SignUpFormProvider = (props: Props) => {
+const SignUpFormProvider = ({children}: Props) => {
   return (
     <div>SignUpFormProvider</div>
   )
