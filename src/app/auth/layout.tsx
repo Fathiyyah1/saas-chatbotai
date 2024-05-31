@@ -29,6 +29,7 @@ const Layout = async ({ children }: Props) => {
                     />
                     {children}
                 </div>
+                <div className=""></div>
             </div>
     )
 }
