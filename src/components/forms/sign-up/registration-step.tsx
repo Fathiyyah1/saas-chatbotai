@@ -1,4 +1,5 @@
-import React from 'react'
+import { useAuthContextHook } from '@/constants/use-auth-context'
+import React, { useState } from 'react'
 import { useFormContext } from 'react-hook-form'
 
 type Props = {}
@@ -9,6 +10,10 @@ const RegisterationFormStep = (props: Props) =>  {
         formState: {errors},
         setValue,
     } = useFormContext()
+    const { currentStep } = useAuthContextHook()
+    const [onOTP, setOnOTP] = useState<string>('')
+    const [onUserType, setOnUserType] = useState<'owner' | 'student'>('owner')
+    setValue('otp', onOTP)
   return (
     <div>RegisterationFormStep</div>
   )
