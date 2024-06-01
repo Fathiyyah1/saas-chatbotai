@@ -1,12 +1,23 @@
+import { AuthContextProvider } from '@/constants/use-auth-context'
+import { useSignUpForm } from '@/hooks/sign-up/use-sign-up'
 import React from 'react'
+import { FormProvider } from 'react-hook-form'
 
 type Props = {
     children: React.ReactNode
 }
 
 const SignUpFormProvider = ({children}: Props) => {
+  const { methods, onHandleSubmit, loading } = useSignUpForm()
   return (
-    <div>SignUpFormProvider</div>
+    <AuthContextProvider>
+      <FormProvider {...methods}>
+        <form
+        onSubmit={onHandleSubmit} className='h-full'>
+
+        </form>
+      </FormProvider>
+    </AuthContextProvider>
   )
 }
 
