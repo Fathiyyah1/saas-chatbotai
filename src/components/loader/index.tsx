@@ -1,6 +1,6 @@
 import React from 'react'
+import { Spinner } from '../spinner'
 import { cn } from '@/lib/utils'
-import { Spinner } from '../spinner.tsx'
 
 type LoaderProps = {
   loading: boolean
